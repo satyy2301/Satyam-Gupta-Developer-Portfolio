@@ -81,9 +81,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-muted-foreground text-sm text-center flex items-center gap-2">
-            © 2026 Satyam Gupta. Crafted with
-            <Heart className="w-4 h-4 text-destructive animate-pulse" />
-            and lots of coffee.
+            © 2026 Satyam Gupta. All rights reserved.
           </p>
         </div>
       </div>
