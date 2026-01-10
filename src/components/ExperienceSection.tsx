@@ -173,7 +173,9 @@ const ExperienceSection = () => {
           {/* Download Resume Button */}
           <motion.a
             href="/resume/SATYAM_GUPTA_RESUME.pdf"
-            download
+            download="Satyam_Gupta_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground font-heading font-semibold rounded-xl hover:shadow-neon-cyan transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

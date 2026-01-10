@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
-import avatarImage from '@/assets/avatar-holographic.png';
+import avatarImage from '@/assets/image.jpg';
 
 const HeroSection = () => {
   const scrollToSection = (id: string) => {
@@ -74,7 +74,7 @@ const HeroSection = () => {
                 <Github className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
               <a 
-                href="https://linkedin.com/in/satyamgupta-dev" 
+                href="https://www.linkedin.com/in/satyam-gupta-883729234/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-3 glass-card rounded-xl hover:shadow-neon-purple transition-all duration-300 group"

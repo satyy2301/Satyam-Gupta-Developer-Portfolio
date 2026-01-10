@@ -41,16 +41,42 @@ const ContactSection = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!validateForm()) return;
     
-    // Simulate form submission (in production, connect to Formspree or similar)
-    setStatus('success');
-    setFormData({ name: '', email: '', message: '' });
-    
-    setTimeout(() => setStatus('idle'), 5000);
+    try {
+      // Using Web3Forms - Get your free access key from https://web3forms.com
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'c5247f6e-158d-4b06-9952-0ca9ab5d3efe', // Replace with your Web3Forms access key
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `New Portfolio Contact from ${formData.name}`,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        setStatus('error');
+        setTimeout(() => setStatus('idle'), 5000);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 5000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -95,7 +121,7 @@ const ContactSection = () => {
     {
       icon: <Linkedin className="w-6 h-6" />,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/satyamgupta-dev',
+      href: 'https://www.linkedin.com/in/satyam-gupta-883729234/',
       color: 'purple',
     },
   ];
@@ -270,6 +296,16 @@ const ContactSection = () => {
                   >
                     <CheckCircle className="w-5 h-5" />
                     Message sent successfully! I'll get back to you soon.
+                  </motion.p>
+                )}
+                {status === 'error' && (
+                  <motion.p 
+                    className="text-destructive text-sm flex items-center justify-center gap-2"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                  >
+                    <AlertCircle className="w-5 h-5" />
+                    Failed to send message. Please try again or email directly.
                   </motion.p>
                 )}
               </form>
