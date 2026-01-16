@@ -149,8 +149,8 @@ const ExperienceSection = () => {
   return (
     <section id="resume" className="relative py-24 md:py-32 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-      <div className="absolute top-1/2 -translate-y-1/2 right-0 w-96 h-96 bg-neon-purple/5 rounded-full blur-[150px]" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" />
+      <div className="absolute top-1/2 -translate-y-1/2 right-0 w-96 h-96 bg-neon-purple/5 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="container mx-auto px-6" ref={ref}>
         {/* Section Header */}
@@ -171,18 +171,20 @@ const ExperienceSection = () => {
           </p>
 
           {/* Download Resume Button */}
-          <motion.a
-            href="/resume/SATYAM_GUPTA_RESUME.pdf"
-            download="Satyam_Gupta_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground font-heading font-semibold rounded-xl hover:shadow-neon-cyan transition-all duration-300"
+          <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            className="inline-block"
           >
-            <Download className="w-5 h-5" />
-            Download Resume
-          </motion.a>
+            <a
+              href="/resume/SATYAM_GUPTA_RESUME.pdf"
+              download="Satyam_Gupta_Resume.pdf"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground font-heading font-semibold rounded-xl hover:shadow-neon-cyan transition-all duration-300 cursor-pointer"
+            >
+              <Download className="w-5 h-5" />
+              Download Resume
+            </a>
+          </motion.div>
         </motion.div>
 
         {/* Timeline */}
