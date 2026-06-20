@@ -12,34 +12,35 @@ interface Skill {
 const skills: Skill[] = [
   // Frontend
   { name: 'React.js / Next.js', level: 95, color: 'cyan', category: 'Frontend' },
-  { name: 'TypeScript', level: 90, color: 'blue', category: 'Frontend' },
+  { name: 'TypeScript', level: 99, color: 'blue', category: 'Frontend' },
   { name: 'Tailwind CSS', level: 92, color: 'cyan', category: 'Frontend' },
   { name: 'HTML5 / CSS3', level: 95, color: 'purple', category: 'Frontend' },
   { name: 'JavaScript (ES6+)', level: 94, color: 'blue', category: 'Frontend' },
   { name: 'Material-UI / Ant Design', level: 85, color: 'purple', category: 'Frontend' },
   
   // Backend
-  { name: 'Node.js / Express', level: 88, color: 'green', category: 'Backend' },
-  { name: 'Python', level: 85, color: 'blue', category: 'Backend' },
+  { name: 'Node.js / Express', level: 98, color: 'green', category: 'Backend' },
+  { name: 'Python', level: 95, color: 'blue', category: 'Backend' },
+  { name: 'Golang', level: 95, color: 'blue', category: 'Backend' },
   { name: 'MongoDB / Firebase', level: 85, color: 'green', category: 'Backend' },
   { name: 'REST APIs', level: 90, color: 'cyan', category: 'Backend' },
   { name: 'PostgreSQL / MySQL', level: 80, color: 'green', category: 'Backend' },
-  { name: 'GraphQL', level: 75, color: 'pink', category: 'Backend' },
+  { name: 'GraphQL', level: 95, color: 'pink', category: 'Backend' },
   
   // AI/ML
-  { name: 'AI / Machine Learning', level: 80, color: 'purple', category: 'AI/ML' },
-  { name: 'LangChain / RAG', level: 78, color: 'pink', category: 'AI/ML' },
-  { name: 'OpenCV / OCR', level: 75, color: 'purple', category: 'AI/ML' },
-  { name: 'TensorFlow / PyTorch', level: 70, color: 'blue', category: 'AI/ML' },
-  { name: 'NLP / Transformers', level: 72, color: 'pink', category: 'AI/ML' },
+  { name: 'AI / Machine Learning', level: 90, color: 'purple', category: 'AI/ML' },
+  { name: 'LangChain / RAG', level: 98, color: 'pink', category: 'AI/ML' },
+  { name: 'OpenCV / OCR', level: 95, color: 'purple', category: 'AI/ML' },
+  { name: 'TensorFlow / PyTorch', level: 90, color: 'blue', category: 'AI/ML' },
+  { name: 'NLP / Transformers', level: 92, color: 'pink', category: 'AI/ML' },
   
   // Tools & DevOps
   { name: 'Git / GitHub', level: 92, color: 'green', category: 'Tools' },
   { name: 'Redux / Zustand', level: 88, color: 'blue', category: 'Tools' },
   { name: 'Postman / DevTools', level: 90, color: 'cyan', category: 'Tools' },
-  { name: 'Docker / CI/CD', level: 75, color: 'green', category: 'Tools' },
-  { name: 'AWS / Cloud Services', level: 70, color: 'cyan', category: 'Tools' },
-  { name: 'Figma / UI Design', level: 78, color: 'purple', category: 'Tools' },
+  { name: 'Docker / CI/CD', level: 95, color: 'green', category: 'Tools' },
+  { name: 'AWS / Cloud Services', level: 90, color: 'cyan', category: 'Tools' },
+  { name: 'Figma / UI Design', level: 98, color: 'purple', category: 'Tools' },
 ];
 
 const SkillOrb = ({ skill, index }: { skill: Skill; index: number }) => {

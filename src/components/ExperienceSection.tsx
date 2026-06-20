@@ -14,7 +14,19 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    title: 'Software Engineer Intern',
+    title: 'Fullstack Developer',
+    company: 'Comprint Tech Solutions',
+    location: 'Gurugram, India',
+    period: 'Jan 2026',
+    description: [
+      'Building a custom cloud management platform from the ground up – integrating OpenStack APIs (Nova, Neutron, Cinder, Keystone) to enable users to provision VMs, configure networking, and manage storage through a unified dashboard. ',
+      'I own the full stack: designing REST APIs with NestJS/TypeORM,Cron jobs in Golang, building responsive frontends with Next.js, and implementing scheduled cron jobs for automated sync and cleanup.',
+      ' Also contributing to MLOps pipelines for AI‑driven cloud optimisation',
+    ],
+    color: 'green',
+  },
+  {
+    title: 'Software Engineer',
     company: 'ToolJet',
     location: 'India',
     period: 'Jun 2025 – Oct 2025',
@@ -27,7 +39,7 @@ const experiences: Experience[] = [
     color: 'cyan',
   },
   {
-    title: 'Junior Software Engineer Intern',
+    title: 'Junior Software Engineer',
     company: 'ORIserve',
     location: 'India',
     period: 'Jul 2024 – Jun 2025',
@@ -40,7 +52,7 @@ const experiences: Experience[] = [
     color: 'purple',
   },
   {
-    title: 'Backend Developer Intern',
+    title: 'Backend Developer',
     company: 'CRIS (Railway)',
     location: 'Delhi',
     period: 'May 2024 – Jul 2024',
@@ -52,7 +64,7 @@ const experiences: Experience[] = [
     color: 'green',
   },
   {
-    title: 'Frontend Developer Intern',
+    title: 'Frontend Developer',
     company: 'Coincent',
     location: 'India',
     period: 'Aug 2022 – Oct 2022',

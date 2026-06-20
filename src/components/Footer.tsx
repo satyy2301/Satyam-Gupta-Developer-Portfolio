@@ -12,6 +12,7 @@ const Footer = () => {
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#resume' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Resume', href: 'https://drive.google.com/file/d/1Cy53Fq2SqGHBgUmUxe0UYJzNIxkk1bEa/view?usp=sharing' },
   ];
 
   const socialLinks = [
